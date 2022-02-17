@@ -1,0 +1,23 @@
+
+#gridContainer {
+    display: grid; 
+    justify-content: center;
+    grid-template-rows: repeat(16, 50px);
+    grid-template-columns: repeat(16, 50px);  
+    height: 100vh;
+    width: 100%;
+}
+
+.banner {
+    display:flex;
+    justify-content: center;
+}
+
+#gridClear {
+height: 50px;
+width: 50px;
+}
+.gridBox {
+/* height: 20px;
+width: 20px;   */
+}
