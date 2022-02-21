@@ -23,15 +23,27 @@ hover.addEventListener("mouseover", function (event) {
 const gridButton = document.getElementById("gridButton");
 
 gridButton.onclick = function() {
-    let gridAmount = prompt("How many squares per side would you like on your new grid?");
+    let newGridAmount = prompt("How many squares per side would you like on your new grid?");
     let element = document.getElementsByClassName('grid');
-    let newGridContainer = document.getElementById('gridContainer');
     // for loop to clear gridContainer
     for (i=0; i < blockAmount; i++) {
         element[i].style.backgroundColor = '';
     }
+    if (newGridAmount > 99) {
+        return alert("Please enter fewer than 100 squares per side.")
+    }
+
     // for loop to create prompted grid input amount 
-    
+    // function generateNewGrid () {
+    //     if (gridAmount > 99) {
+    //         prompt("Please enter a grid of 99 squares or fewer."); 
+    //     } else if (gridAmount < 99) {
+    //         newGridContainer = document.getElementById('gridContainer');
+    //         newGridContainer[0].style.gridTemplateColumns = repeat(gridAmount);
+    //         newGridContainer[0].style.gridTemplateRows = repeat(gridAmount);
+    //     }
+    //     generateGrid(newGridAmount)
+    // }
 
     
     
@@ -40,4 +52,4 @@ gridButton.onclick = function() {
 //Function for button to prompt user to input size of gridContainer 
 // gridButton.onclick = function() {
 //     prompt("How many squares per side would you like on your new grid?");
-// }
+
