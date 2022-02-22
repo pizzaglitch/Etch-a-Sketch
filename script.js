@@ -5,7 +5,7 @@ function generateGrid(rows, cols) {
     container.style.setProperty('--grid-cols', cols);
     for(i=0; i < (rows * cols); i++) {
         const cell = document.createElement("div");
-        cell.innerText = (i + 1);
+        // cell.innerText = (i + 1);
         container.appendChild(cell).className = "grid-item";
     }
 }
@@ -32,7 +32,7 @@ gridButton.onclick = function () {
     }
     
     //for loop to create new grid
-    if (newGridAmount < 99) {
+    if (newGridAmount < 100) {
         // delete previous divs 
         function removeAllChildNodes(parent) {
             while (parent.firstChild) {
@@ -47,7 +47,7 @@ gridButton.onclick = function () {
         container.style.setProperty('--grid-cols', newGridAmount);
         for(j=0; j < (newGridAmount * newGridAmount); j++) {
             const cell = document.createElement("div");
-            cell.innerText = (j + 1);
+            // cell.innerText = (j + 1);
             container.appendChild(cell).className = "grid-item";
         }
     }
